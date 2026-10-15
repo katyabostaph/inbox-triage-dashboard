@@ -15,8 +15,8 @@ export function ReadyQueue() {
   return (
     <section
       aria-label="Ready queue"
-      className="border-t border-white/10 bg-[#0A0A0B]/80 px-4 py-3 backdrop-blur-xl sm:px-6"
-      style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
+      className="safe-x border-t border-white/10 bg-[#0A0A0B]/80 py-3 backdrop-blur-xl"
+      style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom, 0px))" }}
     >
       <div className="mx-auto w-full max-w-6xl">
         <div className="mb-2 flex items-center justify-between gap-3">
