@@ -19,6 +19,28 @@ html {
   color: var(--foreground);
 }
 
+/* viewport-fit=cover lets the Home Screen app paint under the notch.
+   Fallbacks keep the previous 1rem / 1.5rem gutters when env() is unsupported. */
+.safe-top {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.safe-x {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-left: max(1rem, env(safe-area-inset-left, 0px));
+  padding-right: max(1rem, env(safe-area-inset-right, 0px));
+}
+
+@media (min-width: 640px) {
+  .safe-x {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-left: max(1.5rem, env(safe-area-inset-left, 0px));
+    padding-right: max(1.5rem, env(safe-area-inset-right, 0px));
+  }
+}
+
 body {
   min-height: 100dvh;
   background:
